@@ -1,7 +1,7 @@
 # Linux Permissions and Processes Lab
 
 ## Objective
-To understand file permissions and process management in Linux.
+To understand how file permissions and processes work in Linux and how to control them.
 
 ---
 
@@ -13,23 +13,42 @@ To understand file permissions and process management in Linux.
 
 ### Tasks Performed
 - Created a file (secret.txt)
-- Changed file permissions using chmod
-- Restricted access to the file
-- Restored access permissions
-- Made a file executable
+- Modified file permissions using chmod
+- Restricted and restored access
+- Made a script executable
+
+### Understanding Permissions
+
+Linux permissions are divided into three groups:
+- Owner
+- Group
+- Others
+
+Each permission has a numeric value:
+- 4 = read (r)
+- 2 = write (w)
+- 1 = execute (x)
+
+Permissions are calculated by adding these values.
+
+Examples:
+- 7 = rwx (read, write, execute)
+- 6 = rw-
+- 5 = r-x
+- 4 = r--
 
 ### Examples
 
-Removed all permissions:
+Remove all permissions:
 chmod 000 secret.txt
 
-Gave read permission:
+Give read permission to owner:
 chmod 400 secret.txt
 
-Full access:
+Give full access:
 chmod 777 secret.txt
 
-Made script executable:
+Make script executable:
 chmod 755 script.sh
 
 ---
@@ -38,24 +57,28 @@ chmod 755 script.sh
 
 ### Commands Used
 - ps
+- ps aux
 - top
 - kill
 
 ### Tasks Performed
-- Started a process using sleep command
-- Viewed running processes using ps
-- Monitored system using top
-- Killed a running process
+- Started a process using the sleep command
+- Viewed running processes
+- Monitored system activity
+- Terminated a running process
 
-### Example
+### Examples
 
-Start process:
+Start a process:
 sleep 1000
 
-View processes:
+View running processes:
 ps aux
 
-Kill process:
+Monitor system:
+top
+
+Kill a process:
 kill <PID>
 
 Force kill:
@@ -64,12 +87,19 @@ kill -9 <PID>
 ---
 
 ## Challenges Faced
-At first I was confused about chmod numbers, but after practicing I understood how they work.
+- Initially found chmod numbers confusing
+- Understanding process IDs (PID) took some practice
 
 ---
 
 ## Learning
-- File permissions control access to files
+- File permissions control who can access or modify files
 - Numeric values in chmod represent permissions (4 = read, 2 = write, 1 = execute)
-- Processes can be monitored and terminated
-- Linux gives full control over system behavior
+- Processes are running programs that can be monitored and controlled
+- Linux provides full control over system behavior
+
+---
+
+## Conclusion
+This lab helped me understand how to manage file access and control running processes in Linux.
+
