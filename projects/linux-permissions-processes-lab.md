@@ -87,8 +87,7 @@ kill -9 <PID>
 ---
 
 ## Challenges Faced
-- Initially found chmod numbers confusing
-- Understanding process IDs (PID) took some practice
+- Initially I was confused about chmod numbers, but after practicing I understood how they work.
 
 ---
 
