@@ -64,25 +64,6 @@ sudo journalctl -n 20 | grep sudo
 * `grep` helps filter relevant information
 * Combining commands improves efficiency
 
----
-
-## 📸 Example Outputs
-
-### Last 20 Logs
-
-![Last 20 Logs](../images/journalctl-last20.png)
-
----
-
-### Sudo Activity
-
-![Sudo Logs](../images/journalctl-sudo.png)
-
----
-
-### Failed Events
-
-![Failed Logs](../images/journalctl-failed.png)
 
 ---
 
